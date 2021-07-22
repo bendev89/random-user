@@ -64,7 +64,7 @@ function calculatTotal() {
     console.log(totalWealth);
     const totalEl = document.createElement('div');
     totalEl.classList.add('total');
-    totalEl.innerHTML = `<h3>Total des fortunes <strong>${totalWealth}</strong></h3>`;
+    totalEl.innerHTML = `<h3>Total des fortunes <strong>${totalWealth} €</strong></h3>`;
     main.appendChild(totalEl);
 }
 
