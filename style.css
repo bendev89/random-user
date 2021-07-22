@@ -49,5 +49,22 @@ h2{
     font-weight: 300;
     margin: 0 0 20px;
 }
-
+.person{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.person > div{
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+}
+.person > div img{
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    margin-right: 5px;
+}
 
