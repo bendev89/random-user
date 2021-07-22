@@ -9,7 +9,7 @@ body{
     align-items: center;
     height: 100vh;
     padding: 20px;
-    background-color: #a19e9e;
+    background-color: #4c727e6e;
     font-family: "Roboto", sans-serif;
     
 }
@@ -74,5 +74,9 @@ h2{
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
     margin-right: 5px;
+}
+.total h3{
+    display: flex;
+    justify-content: space-between;
 }
 

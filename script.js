@@ -20,11 +20,11 @@ async function getRandomPerson() {
         image: `${person.picture.thumbnail}`,
         wealth: Math.floor(Math.random() * 1000000)
     }
-    console.log(newPerson);
+
     addPerson(newPerson);
      
 }
-getRandomPerson();
+
 
  function addPerson(obj) {
      data.push(obj);
@@ -50,5 +50,29 @@ getRandomPerson();
     updateDom();
      
  }
+function sortByRichest() {
+    data.sort((a, b) => b.wealth - a.wealth);
+    updateDom();
+}
+function showMillionnaires() {
+    data = data.filter( person => person.wealth > 1000000);
+    updateDom();
+}
+
+function calculatTotal() {
+    const totalWealth = data.reduce((acc, person) => (acc += person.wealth), 0);
+    console.log(totalWealth);
+    const totalEl = document.createElement('div');
+    totalEl.classList.add('total');
+    totalEl.innerHTML = `<h3>Total des fortunes <strong>${totalWealth}</strong></h3>`;
+    main.appendChild(totalEl);
+}
+
+
+ getRandomPerson();
  addPersonBtn.addEventListener('click', getRandomPerson);
  doubleBtn.addEventListener('click', doubleMoney);
+ sortBtn.addEventListener('click', sortByRichest);
+ millionnaireBtn.addEventListener('click', showMillionnaires);
+ totalBtn.addEventListener('click', calculatTotal);
+ 
