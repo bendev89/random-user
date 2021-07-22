@@ -43,4 +43,12 @@ getRandomPerson();
 
      });
  }
+ function doubleMoney() {
+    data = data.map((person)=>{
+        return {...person, wealth:person.wealth * 2};
+    })
+    updateDom();
+     
+ }
  addPersonBtn.addEventListener('click', getRandomPerson);
+ doubleBtn.addEventListener('click', doubleMoney);
